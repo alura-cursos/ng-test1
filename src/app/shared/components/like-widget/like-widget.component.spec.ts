@@ -1,11 +1,13 @@
-import { UniqueIdService } from '../../services/unique-id/unique-id.service';
+import { TestBed } from '@angular/core/testing';
 import { LikeWidgetComponent } from './like-widget.component';
 
 describe(LikeWidgetComponent.name, () => {
   let component: LikeWidgetComponent = null;
 
-  beforeEach(() => {
-
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [LikeWidgetComponent]
+    }).compileComponents();
   });
 
   it('', () => {
