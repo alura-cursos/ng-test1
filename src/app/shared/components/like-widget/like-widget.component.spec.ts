@@ -3,15 +3,14 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { UniqueIdService } from '../../services/unique-id/unique-id.service';
 import { LikeWidgetComponent } from './like-widget.component';
+import { LikeWidgetModule } from './like-widget.module';
 
 describe(LikeWidgetComponent.name, () => {
   let fixture: ComponentFixture<LikeWidgetComponent> = null;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [LikeWidgetComponent],
-      providers: [UniqueIdService],
-      imports: [FontAwesomeModule]
+      imports: [LikeWidgetModule]
     }).compileComponents();
 
     fixture = TestBed.createComponent(LikeWidgetComponent);
@@ -21,4 +20,5 @@ describe(LikeWidgetComponent.name, () => {
     const instance = fixture.componentInstance;
     expect(instance).toBeTruthy();
   });
+
 });
