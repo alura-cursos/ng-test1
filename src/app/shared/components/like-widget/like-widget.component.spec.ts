@@ -1,5 +1,4 @@
 import { ComponentFixture, ComponentFixtureAutoDetect, TestBed } from '@angular/core/testing';
-;
 import { LikeWidgetComponent } from './like-widget.component';
 import { LikeWidgetModule } from './like-widget.module';
 
@@ -33,10 +32,11 @@ describe(LikeWidgetComponent.name, () => {
   });
 
   it(`#${LikeWidgetComponent.prototype.like.name}
-    should trigger emission when called`, () => {
+    should trigger emission when called`, done => {
       fixture.detectChanges();
       component.liked.subscribe(() => {
         expect(true).toBeTrue();
+        done();
       });
       component.like();
   });
