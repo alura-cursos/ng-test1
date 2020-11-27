@@ -36,6 +36,6 @@ describe(LikeWidgetComponent.name, () => {
       spyOn(component.liked, 'emit');
       fixture.detectChanges();
       component.like();
-      expect(component.liked.emit).toHaveBeenCalled();
+      expect(component.liked.emit).not.toHaveBeenCalled();
   });
 });
