@@ -1,4 +1,4 @@
-import { ComponentFixture, ComponentFixtureAutoDetect, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { LikeWidgetComponent } from './like-widget.component';
 import { LikeWidgetModule } from './like-widget.module';
 
@@ -36,6 +36,6 @@ describe(LikeWidgetComponent.name, () => {
       spyOn(component.liked, 'emit');
       fixture.detectChanges();
       component.like();
-      expect(component.liked.emit).not.toHaveBeenCalled();
+      expect(component.liked.emit).toHaveBeenCalled();
   });
 });
